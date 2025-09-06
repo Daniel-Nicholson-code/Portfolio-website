@@ -1,0 +1,201 @@
+:root{
+  --transitionLength: 0.2s;
+  
+  /* Using a pallette of brown, green, dark grey */
+  --color-borders: rgb(177, 116, 87);
+  --color-lightBackground: rgb(153, 124, 112);
+  --color-text: rgb(74, 73, 71);
+  --color-subtext: rgb(104, 87, 82);
+  --color-background: rgb(248, 248, 248);
+  --color-highlightBackground: rgb(255, 255, 255);
+  --color-blurredBackground: rgba(255, 255, 255, 0.6);
+  --color-blurredBackgroundHighlight: rgba(200, 200, 200, 0.3);
+  --color-accent: rgb(142, 180, 134);
+  --color-darkerAccent: rgb(106, 134, 100);
+  --color-highlight: rgb(219, 219, 219);
+  --color-links: rgb(81, 106, 228);
+
+}
+
+* {
+  margin: 0;
+}
+
+@font-face{
+  font-family: Computer-modern;
+  src: url(../cmunrm.ttf);
+}
+
+html{
+  color-scheme: light;
+}
+
+body{
+  font-family: Computer-modern;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  transition: background-color var(--transitionLength);
+  font-weight: 600;
+}
+
+body b{
+  color: var(--color-accent);
+}
+
+/* Light and dark mode is now a depricated feature */
+
+.light-Mode{
+  --color-borders: rgb(186, 186, 186);
+  --color-lightBackground: rgb(173, 173, 173);
+  --color-text: rgb(0, 0, 0);
+  --color-subtext: rgb(123, 123, 123);
+  --color-background: rgb(231, 231, 231);
+  --color-highlightBackground: rgb(255, 255, 255);
+  --color-blurredBackground: rgba(255, 255, 255, 0.6);
+  --color-blurredBackgroundHighlight: rgba(200, 200, 200, 0.3);
+  --color-accent: rgb(31, 102, 245);
+  --color-darkerAccent: rgb(29, 76, 171);
+  --color-highlight: rgb(229, 229, 229);
+}
+
+.dark-Mode{
+  --color-borders: rgb(132, 132, 132);
+  --color-lightBackground: rgb(132, 132, 132);
+  --color-text: rgb(255, 255, 255);
+  --color-subtext: rgb(181, 181, 181);
+  --color-background: rgb(27, 30, 32);
+  --color-highlightBackground: rgb(63, 69, 75);
+  --color-blurredBackground: rgba(65, 73, 79, 0.6);
+  --color-blurredBackgroundHighlight: rgba(255, 255, 255, 0.2);
+  --color-accent: rgb(31, 102, 245);
+  --color-darkerAccent: rgb(75, 126, 229);
+  --color-highlight: rgb(92, 93, 100);
+}
+
+/* ============================================================================================================================
+    vvv Header vvv --> */
+
+h2{
+  margin-left: 100px;
+  margin-top: 70px;
+  font-weight: 400;
+  transition: color var(--transitionLength);
+}
+
+#headerSpacing{
+  width: 100%;
+  height: 60px;
+}
+
+.header{
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+  background-color: var(--color-blurredBackground);
+  backdrop-filter: blur(20px);
+  position: fixed;
+  top: 0px;
+  z-index: 1000;
+  transition: background-color var(--transitionLength);
+  border-bottom-style: solid;
+  border-color: var(--color-borders);
+
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 400px 1fr clamp(200px, 20%, 700px);
+  grid-template-areas: 'title' 'nav-buttons' 'contactMe-button';
+  justify-items: center;
+  align-items: center;
+}
+
+#header-column1{
+  grid-area: 'title';
+}
+
+.header-column2{
+  grid-area: 'nav-buttons';
+}
+
+.header-column3{
+  grid-area: 'contactMe-button';
+}
+
+.header h1{
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.header a{
+  padding: 10px 15px;
+  margin-right: 5px;
+  border-radius: 5px;
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 700;
+  transition: background-color var(--transitionLength);
+}
+
+.header a:hover{
+  background-color: var(--color-blurredBackgroundHighlight);
+}
+
+#contactMeButton{
+  background-color: var(--color-accent);
+  color: rgb(255, 255, 255);
+
+  padding: 10px 15px;
+}
+
+#contactMeButton_underlined{
+  background-color: var(--color-accent);
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 7px;
+
+  padding: 10px 15px;
+}
+
+#contactMeButton:hover{
+  background-color: var(--color-darkerAccent);
+}
+
+#underlined-text{
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 7px;
+}
+
+/* ============================================================================================================================
+    vvv footer vvv --> */
+
+.footer{
+  width: 100%;
+  height: 80px;
+  overflow: hidden;
+  background-color: var(--color-background);
+  color: var(--color-subtext);
+  margin-top: 140px;
+  transition: background-color var(--transitionLength);
+
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 1fr 200px 100px 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.footer-Text{
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.footer-Icon{
+  grid-area: 1 / 3 / 2 / 4;
+  padding: 15px;
+  width: 20px;
+  transition-duration: var(--transitionLength);
+}
+
+.footer-Icon:hover{
+  transform: translateY(-8px);
+}
