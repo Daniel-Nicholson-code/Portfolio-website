@@ -1,0 +1,207 @@
+/* Underlining contact me text in header */
+#about{
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 8px;
+}
+
+/* ============================================================================================================================
+    vvv General page formatting vvv --> */
+
+#page{
+  width: 100%;
+  display: grid;
+}
+
+#content{
+  position: relative;
+  width: 800px;
+  left: calc((100% - 800px)/2);
+  display: grid;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+#content h2{
+  text-decoration: underline;
+  font-weight: 700;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  margin-left: 0px;
+  margin-top: 60px;
+}
+
+#content p{
+  margin-top: 20px;
+}
+
+#content a{
+  color: var(--color-links);
+}
+
+/* ============================================================================================================================
+    vvv Github section vvv --> */
+
+#githubChart{
+  display: none;
+
+  width: 100%;
+  height: 210px;
+  background-size: auto 100%;
+  position: relative;
+  background-image: url('../Images/github image 2025.webp');
+}
+
+#githubBox{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-highlightBackground);
+  margin-top: 20px;
+  width: calc(100% - 30px);
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+
+  border-radius: 10px;
+  border-style: solid;
+  border-color: var(--color-borders);
+}
+
+/* ============================================================================================================================
+    vvv Links to other pages vvv --> */
+
+#links{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  height: 40px;
+  margin-top: 20px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#links p{
+  margin: 0px;
+  color: var(--color-subtext);
+}
+
+#links a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-highlightBackground);
+  transition: background-color var(--transitionLength);
+  height: 40px;
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 5px;
+  margin-right: 5px;
+
+  border-radius: 10px;
+  border-style: solid;
+  border-color: var(--color-borders);
+}
+
+#links a:hover{
+  background-color: var(--color-highlight);
+}
+
+#QuickLinks{
+  display: flex;
+  min-width: 310px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#QuickLinks a{
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 25px;
+  font-weight: 700;
+  margin-top: 120px;
+}
+
+#QuickLinks a:hover{
+  text-decoration: underline;
+}
+
+/* ============================================================================================================================
+    vvv Media queries vvv --> */
+
+@media (max-width: 915px) {
+
+  #header-column1 h1{
+    display: none;
+  }
+
+  .header{
+    grid-template-columns: 0px 1fr clamp(200px, 20%, 700px);
+  }
+
+  #content{
+    width: 600px;
+    left: calc((100% - 600px)/2);
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  #content{
+    width: 450px;
+    left: calc((100% - 450px)/2);
+  }
+
+}
+
+@media (max-width: 530px) {
+
+  body{
+    font-size: 12px;
+  }
+
+  .header{
+    grid-template-columns: 0px 1fr 0px;
+    min-width: 310px;
+    height: 50px;
+  }
+
+  #contactMeButton{
+    display: none;
+  }
+
+  #content{
+    width: calc(80%);
+    left: max(10%, 20px);
+    min-width: 250px;
+  }
+
+  #content h2{
+    margin-top: 40px;
+  }
+
+  #content p{
+    margin-top: 15px;
+  }
+
+  #links a{
+    height: 30px;
+    margin-left: 2px;
+    margin-right: 2px;
+
+    border-radius: 7px;
+  }
+
+  #githubBox{
+    border-radius: 7px;
+  }
+
+  #QuickLinks a{
+    font-size: 20px;
+  }
+
+}
+

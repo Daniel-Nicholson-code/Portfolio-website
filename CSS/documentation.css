@@ -1,0 +1,337 @@
+/* ============================================================================================================================
+    vvv General formatting vvv --> */
+
+#page{
+  display: flex;
+  width: 100%;
+}
+
+#content{
+  position: relative;
+  width: calc(100% - 250px);
+}
+
+#projectPageTitle{
+  padding: 80px;
+  display: flex;
+  justify-content: center;
+  font-size: 48px;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 2px;
+}
+
+#details{
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: 800px;
+  left: calc((100% - 800px)/2);
+  padding: 10px;
+  background-color: var(--color-highlightBackground);
+  box-sizing: border-box;
+  scroll-margin-top: 85px;
+  border-style: solid;
+  border-color: var(--color-borders);
+
+  border-radius: 10px;
+}
+
+#details p{
+  margin: 10px;
+}
+
+b{
+  font-weight: 700;
+}
+
+/* ============================================================================================================================
+    vvv Sections area vvv --> */
+
+#sectionBoxContainer{
+  position: relative;
+  width: 250px;
+  border-right-style: solid;
+  border-color: var(--color-highlight);
+}
+
+#sectionBoxContainer div{
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 85px;
+  width: 200px;
+  left: 25px;
+  background-color: var(--color-highlightBackground);
+  margin-top: 25px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-style: solid;
+  border-color: var(--color-borders);
+
+  border-radius: 10px;
+}
+
+#sectionBoxContainer a{
+  margin-top: 5px;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+#sectionBoxContainer b{
+  display: block;
+  height: 50px;
+  font-size: 20px;
+}
+
+#sectionBoxContainer a:hover{
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 1px;
+}
+
+/* ============================================================================================================================
+    vvv Documentation content vvv --> */
+
+#documentationContainer{
+  position: relative;
+  display: grid;
+  justify-items: center;
+  width: 800px;
+  left: calc((100% - 800px)/2);
+  margin-top: 80px;
+}
+
+#documentationContainer p{
+  margin-top: 40px;
+  scroll-margin-top: 85px;
+}
+
+#documentationContainer img{
+  margin-top: 40px;
+  border-radius: 10px;
+  width: 600px;
+  scroll-margin-top: 85px;
+
+  border-style: solid;
+  border-color: var(--color-borders);
+}
+
+#documentationContainer h1{
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  scroll-margin-top: 85px;
+}
+
+#documentationContainer a{
+  color: var(--color-links);
+}
+
+#documentationContainer ul{
+  margin-top: 20px;
+  scroll-margin-top: 85px;
+}
+
+#documentationContainer li{
+  margin-top: 0px;
+}
+
+.small{
+  width: 300px !important;
+}
+
+.caption{
+  margin-top: 0px !important;
+}
+
+/* ============================================================================================================================
+    vvv Links to other pages vvv --> */
+
+#QuickLinks{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#QuickLinks a{
+  position: relative;
+  text-decoration: none;
+  color: var(--color-text);
+  top: 50px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+
+#QuickLinks a:hover{
+  text-decoration: underline;
+}
+
+#borderFadeContainer{
+  position: relative;
+  width: 100%;
+  height: 0px;
+}
+
+#borderFade{
+  position: relative;
+  width: 10px;
+  height: 500px;
+  left: 245px;
+  top: -500px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,var(--color-background) 100%);
+}
+
+/* ============================================================================================================================
+    vvv Media queries vvv --> */
+
+@media (max-width: 1120px) {
+
+  #details{
+    width: 600px;
+    left: calc((100% - 600px)/2);
+  }
+
+  #documentationContainer{
+    width: 600px;
+    left: calc((100% - 600px)/2);
+  }
+
+  #documentationContainer img{
+    width: 450px;
+  }
+
+  .small{
+    width: 225px !important;
+  }
+
+}
+
+@media (max-width: 1000px) {
+
+  #header-column1 h1{
+    display: none;
+  }
+
+  .header{
+    grid-template-columns: 0px 1fr clamp(200px, 20%, 700px);
+  }
+
+}
+
+@media (max-width: 920px) {
+
+  #content{
+    width: 100%;
+  }
+
+  #sectionBoxContainer{
+    display: none;
+  }
+
+  #borderFade{
+    display: none;
+  }
+
+}
+
+@media (max-width: 680px) {
+
+  #projectPageTitle{
+    padding: 60px;
+    font-size: 36px;
+  }
+
+  #details{
+    width: 450px;
+    left: calc((100% - 450px)/2);
+  }
+
+  #documentationContainer{
+    width: 450px;
+    left: calc((100% - 450px)/2);
+    margin-top: 20px;
+  }
+
+  #documentationContainer img{
+    width: 350px;
+  }
+
+  .small{
+    width: 175px !important;
+  }
+
+}
+
+@media (max-width: 510px) {
+
+  body{
+    font-size: 12px;
+  }
+
+  .header{
+    grid-template-columns: 0px 1fr 0px;
+    min-width: 310px;
+    height: 50px;
+  }
+
+  #contactMeButton{
+    display: none;
+  }
+
+  #projectPageTitle{
+    padding: 40px;
+    font-size: 24px;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+    min-width: 230px;
+  }
+
+  #details{
+    width: calc(80%);
+    left: max(10%, 20px);
+    padding: 6px;
+    min-width: 250px;
+  }
+
+  #details p{
+    margin: 6px;
+  }
+
+  #documentationContainer{
+    width: calc(80%);
+    left: max(10%, 20px);
+    margin-top: 0px;
+    min-width: 250px;
+  }
+
+  #documentationContainer img{
+    width: 200px;
+  }
+
+  #documentationContainer h1{
+    font-size: 20px;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
+  }
+
+  .small{
+    width: 100px !important;
+  }
+
+  #QuickLinks{
+    min-width: 310px;
+  }
+
+  #QuickLinks a{
+    font-size: 18px;
+  }
+
+  .footer{
+    margin-top: 10px;
+  }
+
+}
