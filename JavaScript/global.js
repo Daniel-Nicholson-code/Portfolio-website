@@ -1,6 +1,7 @@
 // FUNCTION
 
 //Changes website into or out of dark mode
+//IMPORTANT: Depricated
 function togglelightMode(){
   document.body.classList.toggle('light-Mode');
 
@@ -20,6 +21,7 @@ function togglelightMode(){
 // EVENT LISTENER
 
 //Checking if user previously had dark mode on after loading
+//IMPORTANT: Depricated
 document.addEventListener('DOMContentLoaded', function() {
 
   if (localStorage.getItem('theme') == 'light-Mode'){
@@ -27,3 +29,4 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
 });
+
