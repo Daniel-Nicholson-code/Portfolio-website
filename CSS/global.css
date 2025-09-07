@@ -21,17 +21,12 @@
   margin: 0;
 }
 
-@font-face{
-  font-family: Computer-modern;
-  src: url(../cmunrm.ttf);
-}
-
 html{
   color-scheme: light;
 }
 
 body{
-  font-family: Computer-modern;
+  font-family: Garamond, serif;
   color: var(--color-text);
   background-color: var(--color-background);
   transition: background-color var(--transitionLength);
@@ -199,3 +194,4 @@ h2{
 .footer-Icon:hover{
   transform: translateY(-8px);
 }
+
