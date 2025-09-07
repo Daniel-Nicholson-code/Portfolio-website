@@ -1,0 +1,465 @@
+/* Underlining home text in header */
+#home{
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 8px;
+}
+
+/* ============================================================================================================================
+    vvv General page formatting vvv --> */
+
+#page{
+  width: 100%;
+  display: grid;
+}
+
+#content{
+  position: relative;
+  width: 800px;
+  left: calc((100% - 800px)/2);
+  display: grid;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+h2{
+  text-decoration: underline;
+  font-weight: 700;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  margin-left: 0px;
+  margin-top: 60px;
+}
+
+p{
+  margin-top: 20px;
+}
+
+a{
+  color: var(--color-links);
+}
+
+#technologies{
+  display: flex;
+  justify-content: left;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 5px;
+}
+
+#technologies img{
+  float: left;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+/* ============================================================================================================================
+    vvv Pinned projects vvv --> */
+
+#pinned{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.projectBox{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-width: 250px;
+  width: 250px;
+  height: 360px;
+  margin-right: 19px;
+  margin-top: 20px;
+  background-color: var(--color-highlightBackground);
+  border-radius: 10px;
+  border-style: solid;
+  border-color: var(--color-borders);
+}
+
+#finalProjectBox{
+  margin-right: 0px;
+}
+
+.projectBox h3{
+  font-size: 32px;
+  margin: 10px;
+  margin-right: 20px;
+  margin-left: 20px;
+  height: 100px;
+  width: calc(100% - 40px);
+}
+
+.projectBox em{
+  color: var(--color-subtext);
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.projectBox p{
+  height: 170px;
+  width: calc(100% - 40px);
+  margin: 10px;
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.moreInfoButtonContainer{
+  display: grid;
+  width: calc(100% - 40px);
+  height: calc(100% - 400px);
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  justify-items: center;
+  align-items: center;
+}
+
+.moreInfoButton{
+  display: grid;
+  height: 20px;
+  width: 90px;
+  background-color: var(--color-accent);
+  color: white;
+  text-decoration: none;
+  font-weight: 800;
+  padding: 10px;
+  justify-items: center;
+  align-items: center;
+  transition: background-color var(--transitionLength);
+
+  border-radius: 5px;
+}
+
+.moreInfoButton:hover{
+  background-color: var(--color-darkerAccent);
+}
+
+/* ============================================================================================================================
+    vvv Education box vvv --> */
+
+#educationBox{
+  display: grid;
+  grid-template-columns: 1fr 90px 30px 80px 300px 1fr;
+  grid-template-rows: 90px 90px;
+  grid-template-areas:
+  'L-buffer date2 timeline2 logo2 description2 R-buffer'
+  'L-buffer date1 timeline1 logo1 description1 R-buffer';
+  position: relative;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  height: 180px;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: var(--color-highlightBackground);
+  border-radius: 10px;
+  border-style: solid;
+  border-color: var(--color-borders);
+}
+
+em.education2{
+  position: relative;
+  grid-area: date2;
+  margin-top: 0px;
+  font-style: normal;
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+em.education1{
+  position: relative;
+  grid-area: date1;
+  margin-top: 0px;
+  font-style: normal;
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+span.education2{
+  grid-area: timeline2;
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-highlight);
+  border-radius: 10px;
+  z-index: 100;
+}
+
+span.education1{
+  grid-area: timeline1;
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-highlight);
+  border-radius: 10px;
+  z-index: 100;
+}
+
+img.education2{
+  position: relative;
+  grid-area: logo2;
+  height: 50px;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+img.education1{
+  position: relative;
+  grid-area: logo1;
+  height: 50px;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+div.education2{
+  grid-area: description2;
+  justify-content: left;
+  width: 300px;
+}
+
+div.education1{
+  grid-area: description1;
+  justify-content: left;
+  width: 300px;
+}
+
+div.education2 p, div.education1 p{
+  position: relative;
+  margin: 0px;
+}
+
+#educationBox b{
+  font-size: 16px;
+  color: var(--color-text);
+}
+
+#educationBox p{
+  font-size: 12px;
+}
+
+#timeline{
+  grid-area: timeline2;
+  position: absolute;
+  top: 45px;
+  height: 90px;
+  width: 2px;
+  background-color: var(--color-highlight);
+}
+
+#timelineFade{
+  grid-area: timeline2;
+  position: absolute;
+  top: -5px;
+  height: 50px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--color-highlightBackground) 0%, var(--color-highlight) 100%);
+}
+
+/* ============================================================================================================================
+    vvv Links to other pages vvv --> */
+
+.QuickLinks{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.QuickLinks a{
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.QuickLinks a:hover{
+  text-decoration: underline;
+}
+
+#links{
+  position: relative;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  height: 40px;
+  margin-top: 20px;
+  width: 400px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#links p{
+  margin: 0px;
+  color: var(--color-subtext);
+}
+
+#links a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-highlightBackground);
+  transition: background-color var(--transitionLength);
+  height: 40px;
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 5px;
+  margin-right: 5px;
+
+  border-radius: 10px;
+  border-style: solid;
+  border-color: var(--color-borders);
+}
+
+#links a:hover{
+  background-color: var(--color-highlight);
+}
+
+/* ============================================================================================================================
+    vvv Media queries vvv --> */
+
+@media (max-width: 930px) {
+
+  #header-column1 h1{
+    display: none;
+  }
+
+  .header{
+    grid-template-columns: 0px 1fr clamp(200px, 20%, 700px);
+  }
+
+  #content{
+    width: 600px;
+    left: calc((100% - 600px)/2);
+  }
+
+  #pinned{
+    overflow-x: scroll;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  #content{
+    width: 450px;
+    left: calc((100% - 450px)/2);
+  }
+
+  #educationBox{
+    grid-template-columns: 1fr 50px 30px 70px 300px 1fr;
+  }
+
+  #educationBox em{
+    margin: 0px;
+    margin-left: 10px;
+    font-size: 10px;
+  }
+
+  #educationBox img{
+    height: 40px;
+  }
+
+}
+
+@media (max-width: 530px) {
+
+  body{
+    font-size: 12px;
+  }
+
+  .header{
+    grid-template-columns: 0px 1fr 0px;
+    min-width: 310px;
+    height: 50px;
+  }
+
+  #contactMeButton{
+    display: none;
+  }
+
+  #content{
+    width: calc(80%);
+    left: max(10%, 20px);
+    min-width: 250px;
+  }
+
+  #content h2{
+    margin-top: 30px;
+  }
+
+  .projectBox{
+    height: 290px;
+    min-width: 220px;
+  }
+
+  .projectBox h3{
+    font-size: 24px;
+    height: 70px;
+    margin-bottom: 0px;
+  }
+
+  .projectBox p{
+    font-size: 12px;
+    height: 150px;
+  }
+
+  .moreInfoButtonContainer{
+    height: 30px;
+  }
+
+  .moreInfoButton{
+    height: 15px;
+    padding: 7px;
+  }
+
+  #educationBox{
+    grid-template-columns: 1fr 0px 0px 40px 220px 1fr;
+    grid-template-rows: 60px 60px;
+    height: 120px;
+  }
+
+  div.education2, div.education1{
+    width: 220px;
+  }
+
+  #educationBox b{
+    font-size: 12px;
+  }
+
+  #educationBox p{
+    font-size: 8px;
+  }
+
+  #educationBox em, #educationBox span, #timeline, #timelineFade{
+    display: none;
+  }
+
+  #educationBox img{
+    height: 20px;
+  }
+
+  .QuickLinks a{
+    font-size: 16px;
+  }
+
+  #links{
+    width: 80%;
+    min-width: 250px;
+  }
+
+  #links a{
+    height: 30px;
+    margin-left: 2px;
+    margin-right: 2px;
+
+    border-radius: 7px;
+  }
+
+}
