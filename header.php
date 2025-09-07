@@ -9,7 +9,7 @@
   
   <title>Daniel Nicholson</title>
 
-  <link rel='icon' href='/Portfolio/Images/favicon.svg'>
+  <link rel='icon' href='Images/favicon.svg'>
   <link rel='stylesheet' href='CSS/global.css'>
   <script src='Javascript/global.js'></script>
 
@@ -29,5 +29,6 @@
       <a id='contactMeButton' href='about.php#contactMe'>Contact me</a>
     </div>
   </div>
+
 
   <div id='headerSpacing'></div>
