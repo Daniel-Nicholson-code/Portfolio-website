@@ -309,7 +309,7 @@ b{
   }
 
   #documentationContainer img{
-    width: 200px;
+    width: 230px;
   }
 
   #documentationContainer h1{
@@ -319,7 +319,7 @@ b{
   }
 
   .small{
-    width: 100px !important;
+    width: 200px !important;
   }
 
   #QuickLinks{
@@ -336,3 +336,4 @@ b{
 
 
 }
+
