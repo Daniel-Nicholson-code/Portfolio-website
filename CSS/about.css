@@ -65,6 +65,7 @@
   border-radius: 10px;
   border-style: solid;
   border-color: var(--color-borders);
+  border-width: 2px;
 }
 
 /* ============================================================================================================================
@@ -102,6 +103,7 @@
   border-radius: 10px;
   border-style: solid;
   border-color: var(--color-borders);
+  border-width: 2px;
 }
 
 #links a:hover{
@@ -204,4 +206,5 @@
   }
 
 }
+
 
