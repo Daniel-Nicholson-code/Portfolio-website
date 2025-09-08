@@ -92,8 +92,10 @@ h2{
   top: 0px;
   z-index: 1000;
   transition: background-color var(--transitionLength);
+  
   border-bottom-style: solid;
   border-color: var(--color-borders);
+  border-width: 2px;
 
   display: grid;
   grid-template-rows: 100%;
@@ -194,4 +196,5 @@ h2{
 .footer-Icon:hover{
   transform: translateY(-8px);
 }
+
 
