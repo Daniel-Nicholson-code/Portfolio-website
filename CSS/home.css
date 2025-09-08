@@ -74,9 +74,11 @@ a{
   margin-right: 19px;
   margin-top: 20px;
   background-color: var(--color-highlightBackground);
+  
   border-radius: 10px;
   border-style: solid;
   border-color: var(--color-borders);
+  border-width: 2px;
 }
 
 #finalProjectBox{
@@ -158,9 +160,11 @@ a{
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: var(--color-highlightBackground);
+  
   border-radius: 10px;
   border-style: solid;
   border-color: var(--color-borders);
+  border-width: 2px;
 }
 
 em.education2{
@@ -315,6 +319,7 @@ div.education2 p, div.education1 p{
   border-radius: 10px;
   border-style: solid;
   border-color: var(--color-borders);
+  border-width: 2px;
 }
 
 #links a:hover{
@@ -461,5 +466,6 @@ div.education2 p, div.education1 p{
 
     border-radius: 7px;
   }
+
 
 }
