@@ -8,9 +8,8 @@
         <h2>What is the website for?</h2>
 
         <p>The website is to show my software development skills, as a technical portfolio. It's
-            essentially just documentation for all my projects. It took me about 3 months to make
-            as I developed for performance, functionality and with best practices in mind - not 
-            because I needed to, but to show that I can. Here is a more detailed 
+            essentially just documentation for all my projects. It took me about 3 months to make as I 
+            developed for performance, functionality and with best practices in mind. Here is a more detailed 
             <a href='documentation.php?project=Portfolio website'>breakdown of performance and how I 
             made the website</a>. Additionally, the website could be used as a reference for people
             intresting in making the projects I have made themselves.
@@ -32,13 +31,13 @@
             1 or 2 students of sufficient academic merit each year in the department.
         </p>
         <br>
-        <p><b>Completed modules:</b><br>Calculus (92%) · Mulivariable Calculus (84%) · Real Analysis (87%) · 
+        <p><b>First year modules:</b><br>Calculus (92%) · Mulivariable Calculus (84%) · Real Analysis (87%) · 
             Algebra (85%) · Probability and Statistics (89%) · Python (93%) · Dynamics (77%) · 
             Logic, Sets and Counting (82%) · Number Theory (87%)
         </p>
         <br>
         <p><b>Modules I'm currently taking:</b><br>Complex Analysis · Vector Calculus · Transforms and Waves · 
-            Linear Algebra · Probability · Statistical Inference · Python II · Fluid Dynamics · 
+            Linear Algebra · Probability II · Statistical Inference · Python II · Fluid Dynamics · 
             Groups and Rings · Curves and Surfaces · Mathematical Biology · Regression
         </p>
 
@@ -75,5 +74,6 @@
 <div id='QuickLinks'>
   <a href='projects.php'>My Projects →</a>
 </div>
+
 
 <?php include 'footer.php'; ?>
