@@ -31,10 +31,11 @@
   background-color: var(--color-highlightBackground);
   box-sizing: border-box;
   scroll-margin-top: 85px;
+    
   border-style: solid;
   border-color: var(--color-borders);
-
   border-radius: 10px;
+  border-width: 2px;
 }
 
 #details p{
@@ -66,10 +67,11 @@ b{
   margin-top: 25px;
   padding: 10px;
   box-sizing: border-box;
+    
   border-style: solid;
   border-color: var(--color-borders);
-
   border-radius: 10px;
+  border-width: 2px;
 }
 
 #sectionBoxContainer a{
@@ -115,6 +117,7 @@ b{
 
   border-style: solid;
   border-color: var(--color-borders);
+  border-width: 2px;
 }
 
 #documentationContainer h1{
@@ -336,4 +339,5 @@ b{
 
 
 }
+
 
