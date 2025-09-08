@@ -89,7 +89,7 @@
 
       <em class='education2'>2024 → 2027</em>
       <span class='education2'></span>
-      <img src='Images/Newcastle Logo.svg' class='education2'>
+      <img src='Images/Newcastle Logo.webp' class='education2'>
       <div class='education2'>
         <p><b>University of Newcastle upon Tyne<br>Mathematics BSc (Hons)</b>
         <br>Grade (as of after first year): 1st class · 87%</p>
@@ -114,5 +114,6 @@
 
   </div>
 </div>
+
 
 <?php include 'footer.php'; ?>
